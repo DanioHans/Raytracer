@@ -1,0 +1,58 @@
+// Scene 2: 5x5 grid of monkeys + cows on plateau
+// Target: ~70k triangles
+// Total estimate: plateau (~2k) + 25 monkeys (~25k) + 4 cows (~23k) + margin
+
+light 9 -4.0 10.0  0.7
+light -10 2.0 15.0  0.3
+
+
+// Ground
+material 1
+ply_file ../scenes/plateau_subdivided.ply   1.0 1.0 1.0   0.0 0.0 0.0
+
+// 5x5 grid of monkeys on [-0.6, 0.6] in x and y
+// Scale = 0.15 keeps them nicely inside the plateau
+
+// Grid positions
+// x,y ∈ { -0.6, -0.3, 0.0, 0.3, 0.6 }  (5 values each)
+
+// y = -0.6
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.6 -0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.3 -0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.0 -0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.3 -0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.6 -0.6  0.0
+
+// y = -0.3
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.6 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.3 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.0 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.3 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.6 -0.3  0.0
+
+// y = 0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.6  0.0  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.3  0.0  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.0  0.0  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.3  0.0  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.6  0.0  0.0
+
+// y = 0.3
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.6  0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.3  0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.0  0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.3  0.3  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.6  0.3  0.0
+
+// y = 0.6
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.6  0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15  -0.3  0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.0  0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.3  0.6  0.0
+ply_file ../scenes/monkey.ply  0.15 0.15 0.15   0.6  0.6  0.0
+
+// Medium objects: cows at edges inside plateau
+ply_file ../scenes/cow.ply  0.33 0.33 0.33  -0.9 -0.9  0.0
+ply_file ../scenes/cow.ply  0.33 0.33 0.33   0.9 -0.9  0.0
+ply_file ../scenes/cow.ply  0.33 0.33 0.33  -0.9  0.9  0.0
+ply_file ../scenes/cow.ply  0.33 0.33 0.33   0.9  0.9  0.0

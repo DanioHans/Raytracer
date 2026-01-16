@@ -1,0 +1,23 @@
+# Visual Studio cache & user data
+.vs/
+RaytracerAG/x64/
+RaytracerAG/Debug/
+RaytracerAG/Release/
+*.user
+*.suo
+
+# Build artifacts
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.log
+
+# vcpkg (do NOT commit)
+vcpkg/
+installed/
+packages/
+
+# Intermediate project files
+*.VC.db
+*.VC.opendb

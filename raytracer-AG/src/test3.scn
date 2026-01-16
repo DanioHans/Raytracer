@@ -1,0 +1,48 @@
+// Scene 3: mixed scales and densities on plateau
+// - Central large Buddha (~67k tris)
+// - Dense cluster of small/medium objects on the left
+// - Sparse few objects on the right
+// Everything lies on x–y plane at z = 0 and within roughly [-1,1].
+
+light  0.5  0.8  3.0  0.3
+light -0.8 -0.5  2.0  0.4
+light  0.7  0.7  2.5  0.3
+
+// Ground
+material 1
+ply_file ../scenes/plateau_subdivided.ply   1.0 1.0 1.0   0.0 0.0 0.0
+
+// Central Buddha - slightly scaled so it fits nicely on the plateau
+ply_file ../scenes/buddha.ply               0.8 0.8 0.8   0.0 0.0 0.0
+
+// ------------------------------------------------------------------
+// Dense cluster on the left: many small/medium objects
+// x ~ [-0.8, -0.4], y ~ [-0.4, 0.4], z = 0
+// ------------------------------------------------------------------
+
+// Monkeys around (-0.6, 0.0) — fairly dense patch
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.7 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.5 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.7  0.0  0.0
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.5  0.0  0.0
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.7  0.3  0.0
+ply_file ../scenes/monkey.ply  0.20 0.20 0.20  -0.5  0.3  0.0
+
+// Cows in the dense region (more triangles concentrated in one area)
+ply_file ../scenes/cow.ply     0.30 0.30 0.30  -0.8 -0.1  0.0
+ply_file ../scenes/cow.ply     0.30 0.30 0.30  -0.4  0.2  0.0
+
+// Extra triangle primitives in the dense region
+ply_file ../scenes/kubus.ply    0.30 0.30 0.30  -0.6 -0.1  0.0
+ply_file ../scenes/tetra.ply    0.35 0.35 0.35  -0.5  0.1  0.0
+ply_file ../scenes/sphere20.ply 0.25 0.25 0.25  -0.7  0.1  0.0
+ply_file ../scenes/cone.ply     0.30 0.30 0.30  -0.6  0.3  0.0
+
+// ------------------------------------------------------------------
+// Sparse region on the right: only a few isolated objects
+// x ~ [0.4, 0.9], y ~ [-0.4, 0.4], z = 0
+// ------------------------------------------------------------------
+
+ply_file ../scenes/cow.ply     0.35 0.35 0.35   0.8 -0.3  0.0
+ply_file ../scenes/monkey.ply  0.24 0.24 0.24   0.5  0.0  0.0
+ply_file ../scenes/kubus.ply   0.35 0.35 0.35   0.6  0.3  0.0
