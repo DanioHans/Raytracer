@@ -3,6 +3,7 @@
 RaytracerAG/x64/
 RaytracerAG/Debug/
 RaytracerAG/Release/
+RaytracerAG/RaytracerAG/
 *.user
 *.suo
 

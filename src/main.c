@@ -122,7 +122,7 @@ GLuint quadInd[6] = {
 };
 
 
-#define AA_SPP 4
+#define AA_SPP 512
 
 static inline unsigned int xorshift32(unsigned int* state)
 {

@@ -150,7 +150,7 @@ shade_frostedglass(intersection_point ip)
     float roughness = rough_frost;
     if (scene_frost_has_mask)
     {
-        rough_frost = 0.553f;
+        rough_frost = 0.75f;
         float mask = tex_sample_luma(&scene_frost_mask, u, v);
 
         mask = smoothstepf(0.80f, 0.95f, mask);

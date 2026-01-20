@@ -1,6 +1,0 @@
-C:\Users\daink\Documents\AG\raytracing\RaytracerAG\x64\Debug\freeglutd.dll
-C:\Users\daink\Documents\AG\raytracing\RaytracerAG\x64\Debug\glew32d.dll
-C:\Users\daink\Documents\AG\raytracing\RaytracerAG\RaytracerAG\x64\Debug\Raytrace.21A3AEBB.Up2Date
-C:\Users\Dain\Documents\raytracer-AG\RaytracerAG\x64\Debug\freeglutd.dll
-C:\Users\Dain\Documents\raytracer-AG\RaytracerAG\x64\Debug\glew32d.dll
-C:\Users\Dain\Documents\raytracer-AG\RaytracerAG\RaytracerAG\x64\Debug\Raytrace.21A3AEBB.Up2Date

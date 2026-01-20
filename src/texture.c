@@ -125,10 +125,8 @@ void tex_sample_rgb(const Texture* tex, float u, float v, float* r, float* g, fl
     if (v < 0.0f) v = 0.0f;
     if (v > 1.0f) v = 1.0f;
 
-    float vf = 1.0f - v;
-
     int x = (int)floorf(u * (tex->w - 1));
-    int y = (int)floorf(vf * (tex->h - 1));
+    int y = (int)floorf(v * (tex->h - 1));
 
     int idx = (y * tex->w + x) * 3;
     *r = tex->data[idx + 0] / 255.0f;
